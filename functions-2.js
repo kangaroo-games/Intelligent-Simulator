@@ -45,7 +45,7 @@ document.getElementById("alert").innerHTML = " ";
 
 function study() {
 userIQ = userIQ + basicIQIncome * basicIQMultipliar;
-document.getElementById("iq").innerHTML = "Intelligence: " + userIQ;
+document.getElementById("iq").innerHTML = userIQ;
 document.getElementById("alert").innerHTML = " ";
 }
 
