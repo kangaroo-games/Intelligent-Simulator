@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<title>Intelligent Simulator (WIP)</title>
+<link rel="stylesheet" href="game_style-2.css">
+<meta name="viewpoint" content="width = device-width, initial-scale = 1">
+<meta charset="UTF-8">
+</head>
+<body>
+<div id="iqGame">
+<h1>Intelligent Simulator (WIP)</h1>
+<div id="currencies">
+<em>Intelligence: <span id="iq">0</span></em>
+<br>
+<em>Money: <span id="money">0</span></em>
+<var>Total Income: <span id="tI">0</span></var>
+<br>
+</div>
+<br>
+<p id="alert" style="color: red;"></p>
+<br>
+<button id="study" onclick="study()">Study</button>
+<br>
+<button id="work" onclick="work()">Work</button>
+<br>
+<br>
+<label id="numWorker">Workers: 0</label>
+<br>
+<button onclick="buyWorker()" id="buyWorkerButton">Buy Worker</button> 
+<label id="workerPrice">Money: 10</label> 
+<br>
+<var id="workerIncome">Worker Income: 0</var>
+<br>
+<br>
+<label id="numLibrarian">Librarians: 0</label>
+<br>
+<button onclick="buyLibrarian()" id="buyLibarianButton">Buy Librarian</button> 
+<label id="librarianPrice">Money: 300</label>
+<br>
+<var id="librarianIncome">Librarian Income: 0</var>
+<br>
+<br>
+<label id="numProfessor">Professors: 0</label>
+<br>
+<button onclick="buyProfessor()" id="buyProfessorButton">Buy Professor</button> 
+<label id="professorPrice">Money: 1,300</label>
+<br>
+<var id="professorIncome">Professor Income: 0</var>
+<br>
+<br>
+<label id="numLawyer">Lawyers: 0</label>
+<br>
+<button onclick="buyLawyer()" id="buyLawyerButton">Buy Lawyer</button> 
+<label id="lawyerPrice">Money: 9,000</label>
+<br>
+<var id="lawyerIncome">Lawyer Income: 0</var>
+<br>
+<br>
+<label id="numSalesPeople">Sales Person: 0</label>
+<br>
+<button onclick="buySalesPeople()" class="bigButtons" id="buySalesButton">Buy Sales Person</button> 
+<label id="salesPeoplePrice">Money: 20,000</label>
+<br>
+<var id="salesPeopleIncome">Sales Person Income: 0</var>
+<br>
+<br>
+<label>Devision Disaccount: <span id="disaccount">1</span> off all types of workers</label>
+<br>
+<button onclick="increaseDisaccountOff()" class="bigButtons" id="buySalesButton">Buy DD</button>
+<label id="disaccountPrice">IQ: 75,000</label>
+<br>
+<br>
+<!--Working Progress-->
+<!--<label id="libraryLevel">Library Level: 0</label>
+<br>
+<button onclick="buildLibrary()" class="bigButtons" id="buyL">Build Library</button> 
+<button onclick="buyLibraryUpgrade()" class="bigButtons" id="ranker" hidden="true">Build Library</button> 
+<label id="libraryPrice">Money: 1,500,000</label>
+<br>
+<var id="libraryIncome">Library Income: 0</var>-->
+</div>
+<script src="functions-2.js"></script>
+</body>
+</html>

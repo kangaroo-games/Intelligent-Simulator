@@ -1,0 +1,58 @@
+body {
+	text-align: center;
+	background-color: pink;
+}
+
+h1 {
+}
+
+#currencies {
+	color: black;
+	background-color: #ff00ff;
+	padding: 25px 25px 0 25px;
+	border: solid 5px #dd0000;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start; 
+	/* align-items: center; */
+	flex-wrap: wrap;
+	margin: auto;
+	font-size: 35px;
+	width: 275px;
+	height: 170px;
+}
+
+button {
+	border-radius: 5px;
+	width: 150px;
+	height: 38px;
+	font-size: 18px;
+}
+
+/* #iqGame {
+	background: linear-gradiant(lightBlue, yellow, rose);
+	width: 300px;
+	height: 300px;
+} */
+
+/* #alert, #upgrader {
+	color: red;
+	font-size: 18px;
+} */
+
+.bigButtons {
+	width: 200px;
+	height: 40px;
+}
+/*
+#ranker {
+	display: hidden;
+}
+*/
+@viewpoint {
+	width: device-width;
+	} 
+
+@-ms-viewpoint {
+	width: device-width;
+	}
