@@ -36,6 +36,12 @@ var salesPeopleIncome = 15000; //10,000//
 var salesPeopleCost = 20000; //25000//
 var salesPeopleTotal = salesPeopleIncome * salesPeople;
 
+//celebrity variables
+var celebrities = 0;
+var celebrityIncome = 75000; //10,000//
+var celebrityCost = 100000; //25000//
+var celebrityTotal = celebrityIncome * celebrities;
+
 ///work and study functions
 function work() {
 userMoney = userMoney + basicIncome * basicMultipliar;
@@ -60,7 +66,6 @@ function buyWorker() {
 		document.getElementById("workerIncome").innerHTML = "Worker Income: " + workerIncome;
 		document.getElementById("numWorker").innerHTML = "Workers: " + workers;
 		document.getElementById("alert").innerHTML = " ";
-		totalProduction()
 	} else {
 		document.getElementById("alert").innerHTML = "You don't have enough money for a worker!!!";
 	}
@@ -86,7 +91,6 @@ function buyLibrarian() {
 		document.getElementById("librarianIncome").innerHTML = "Librarian Income: " + librarianIncome;
 		document.getElementById("numLibrarian").innerHTML = "Librarians: " + librarians;
 		document.getElementById("alert").innerHTML = " ";
-		totalProduction()
 	} else {
 		document.getElementById("alert").innerHTML = "You don't have enough money for a Librarian!!!";
 	}
@@ -174,6 +178,29 @@ function salesPeoples() {
 	userMoney = userMoney + salesPeopleTotal;
 	document.getElementById("money").innerHTML = userMoney;
 	document.getElementById("salesPeopleIncome").innerHTML = "Sales People Income: " + salesPeopleTotal;
+}
+
+//celebrity functions
+function buyCelebrity() {
+	if (userMoney >= celebrityCost) {
+		userMoney = userMoney - celebrityCost;
+		celebrities = celebrities + 1
+		celebrityCost = celebrityCost * 3 / disaccountDevision;
+		document.getElementById("money").innerHTML = userMoney;
+		document.getElementById("celebrityPrice").innerHTML = "Money: " + celebrityCost;
+		document.getElementById("celebrityIncome").innerHTML = "Celebrity Income: " + celebrityIncome;
+		document.getElementById("numCelebrity").innerHTML = "Celebrities: " + celebrities;
+		document.getElementById("alert").innerHTML = " ";
+	} else {
+		document.getElementById("alert").innerHTML = "You don't have enough money for a Celebrity!!!";
+	}
+}
+
+function celebrity() {
+	celebrtityTotal = celebrityIncome * celebrities;
+	userMoney = userMoney + celebrityTotal;
+	document.getElementById("money").innerHTML = userMoney;
+	document.getElementById("celebrityIncome").innerHTML = "Celebrity Income: " + celebrityTotal;
 }
 
 //disaccount variables
@@ -274,8 +301,9 @@ function totalIncome() {
 	professorTotal = professorIncome * professors;
 	lawyerTotal = lawyerIncome * lawyers;
 	salesPeopleTotal = salesPeopleIncome * salesPeople;
+	celebrityTotal = celebrityIncome * celebrities;
 	
-	tI.innerHTML = workerTotal + librarianTotal + professorTotal + lawyerTotal + salesPeopleTotal;
+	tI.innerHTML = workerTotal + librarianTotal + professorTotal + lawyerTotal + salesPeopleTotal + celebrityTotal;
 }
 
 //interval functions
@@ -285,12 +313,13 @@ window.setInterval(function() {
 	professor();
 	lawyer();
 	salesPeoples();
+	celebrity();
 	//library();
 	totalIncome();
    }, 1000);
    
    var winFunc = window.setInterval(function() {
-	   if (userMoney >= 1500000) {
+	   if (userMoney >= 10000000) {
 		   var alerter = document.getElementById("alert");
 		   alerter.style.color = "blue";
 		   alerter.innerHTML = "Congratulations, you have beaten the game!!!";
@@ -316,7 +345,12 @@ window.setInterval(function() {
 		   
 		   allButtons = document.getElementById("buySalesButton");
 		   allButtons.remove();
-		   clearInterval(winFunc);
+		   
+		   allButtons = document.getElementById("buyCelebrityButton");
+		   allButtons.remove();
+		   
+		   allButtons = document.getElementById("buyDDButton");
+		   allButtons.remove();
 		   
 		   allButtons = document.getElementById("workerPrice");
 		   allButtons.remove();
@@ -331,6 +365,12 @@ window.setInterval(function() {
 		   allButtons.remove();
 		   
 		   allButtons = document.getElementById("salesPeoplePrice");
+		   allButtons.remove();
+		   
+		   allButtons = document.getElementById("CelebrityPrice");
+		   allButtons.remove();
+		   
+		   allButtons = document.getElementById("disaccountPrice");
 		   allButtons.remove();
 		   clearInterval(winFunc);
     }
