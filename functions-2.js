@@ -1,6 +1,6 @@
 //basic variables
-var userMoney = 1499999; //14999999
-var userIQ = 24999;
+var userMoney = 0; //14999999
+var userIQ = 0;
 var basicIncome = 1;
 var basicIQIncome = 1
 var basicMultipliar = 1; //Not to be changed//
